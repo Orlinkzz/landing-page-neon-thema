@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="id" data-theme="cyber" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — NeonLaunch</title>
+  <meta name="description" content="Halaman pricing terpisah untuk template neon multi-page." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: 'rgb(var(--night) / <alpha-value>)',
+            neon: {
+              cyan: 'rgb(var(--neon-cyan) / <alpha-value>)',
+              pink: 'rgb(var(--neon-pink) / <alpha-value>)',
+              lime: 'rgb(var(--neon-lime) / <alpha-value>)',
+              violet: 'rgb(var(--neon-violet) / <alpha-value>)',
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"],
+            display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui"],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="./assets/themes.css" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body data-page="pricing" class="bg-night text-white antialiased">
+  <div class="neo-bg">
+    <div class="neo-bg__gradients"></div>
+    <div class="neo-bg__grid"></div>
+    <div class="neo-bg__noise"></div>
+  </div>
+
+  <div id="siteHeader"></div>
+
+  <main class="pt-32 sm:pt-36">
+    <section>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal">
+          <h1 class="font-display text-4xl sm:text-5xl">Paket <span class="neo-text">Pricing</span></h1>
+          <p class="mt-3 max-w-2xl text-white/70">
+            Halaman ini dibuat terpisah biar cocok untuk funnel iklan / checkout. Tombol CTA bisa kamu arahkan ke URL pembayaran.
+          </p>
+        </div>
+
+        <div id="pricingGrid" class="mt-10 grid gap-5 lg:grid-cols-3"></div>
+
+        <div class="mt-10 neo-card p-6 sm:p-10 reveal">
+          <h2 class="font-display text-3xl">Perbandingan Singkat</h2>
+          <div class="mt-6 overflow-auto rounded-2xl border border-white/10">
+            <table class="min-w-[720px] w-full text-sm">
+              <thead class="bg-white/5">
+                <tr>
+                  <th class="p-4 text-left">Fitur</th>
+                  <th class="p-4 text-left">Starter</th>
+                  <th class="p-4 text-left">Pro</th>
+                  <th class="p-4 text-left">Business</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-white/10">
+                <tr>
+                  <td class="p-4 text-white/70">3 Themes</td><td class="p-4">✅</td><td class="p-4">✅</td><td class="p-4">✅</td>
+                </tr>
+                <tr>
+                  <td class="p-4 text-white/70">Variasi Hero</td><td class="p-4">—</td><td class="p-4">✅</td><td class="p-4">✅</td>
+                </tr>
+                <tr>
+                  <td class="p-4 text-white/70">Multi-product</td><td class="p-4">—</td><td class="p-4">—</td><td class="p-4">✅</td>
+                </tr>
+                <tr>
+                  <td class="p-4 text-white/70">Contoh Form API</td><td class="p-4">—</td><td class="p-4">—</td><td class="p-4">✅</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="index.html#contact" class="neo-btn">Konsultasi</a>
+            <a href="index.html" class="neo-btn neo-btn--ghost">Kembali ke Home</a>
+          </div>
+        </div>
+
+        <div id="siteFooter"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>

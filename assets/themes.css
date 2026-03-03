@@ -1,0 +1,42 @@
+/* =========================================================
+  THEMES (CSS variables)
+  Switch via: <html data-theme="cyber|pink|acid">
+========================================================= */
+
+/* Default tokens (fallback) */
+:root {
+  --night: 7 8 20;              /* background */
+  --white: 255 255 255;
+
+  --neon-cyan: 0 245 255;
+  --neon-pink: 255 61 243;
+  --neon-lime: 182 255 0;
+  --neon-violet: 124 58 237;
+}
+
+/* CYBER BLUE (default feel: cyan + pink) */
+html[data-theme="cyber"] {
+  --night: 7 8 20;
+  --neon-cyan: 0 245 255;
+  --neon-pink: 255 61 243;
+  --neon-lime: 182 255 0;
+  --neon-violet: 124 58 237;
+}
+
+/* NEON PINK (lebih magenta, cyan lebih soft) */
+html[data-theme="pink"] {
+  --night: 10 6 18;
+  --neon-cyan: 106 255 245;
+  --neon-pink: 255 0 200;
+  --neon-lime: 210 255 0;
+  --neon-violet: 176 80 255;
+}
+
+/* ACID LIME (lebih hijau-lime + teal) */
+html[data-theme="acid"] {
+  --night: 6 10 14;
+  --neon-cyan: 0 255 187;
+  --neon-pink: 255 71 180;
+  --neon-lime: 204 255 0;
+  --neon-violet: 106 255 245;
+}

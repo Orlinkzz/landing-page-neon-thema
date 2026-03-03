@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id" data-theme="cyber" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — NeonLaunch</title>
+  <meta name="description" content="Halaman About untuk template landing page neon multi-page." />
+
+  <!-- Favicon (SVG data-uri, tanpa file tambahan) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%23070814'/%3E%3Cpath d='M50 14L78 50 50 86 22 50 50 14Z' fill='%2300f5ff'/%3E%3C/svg%3E">
+
+  <!-- Social preview (opsional: ganti URL/brand kamu) -->
+  <meta property="og:title" content="NeonLaunch — About" />
+  <meta property="og:description" content="Template neon multi-page dengan 3 tema dan 3 layout home." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: 'rgb(var(--night) / <alpha-value>)',
+            neon: {
+              cyan: 'rgb(var(--neon-cyan) / <alpha-value>)',
+              pink: 'rgb(var(--neon-pink) / <alpha-value>)',
+              lime: 'rgb(var(--neon-lime) / <alpha-value>)',
+              violet: 'rgb(var(--neon-violet) / <alpha-value>)',
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"],
+            display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui"],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="./assets/themes.css" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body data-page="about" class="bg-night text-white antialiased">
+  <div class="neo-bg">
+    <div class="neo-bg__gradients"></div>
+    <div class="neo-bg__grid"></div>
+    <div class="neo-bg__noise"></div>
+  </div>
+
+  <!-- Injected header -->
+  <div id="siteHeader"></div>
+
+  <main class="pt-32 sm:pt-36">
+    <section>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal">
+          <h1 class="font-display text-4xl sm:text-5xl">Tentang <span class="neo-text">NeonLaunch</span></h1>
+          <p class="mt-3 max-w-2xl text-white/70">
+            Halaman About ini contoh. Kamu bisa jadikan: profil agency, story brand, atau detail produk.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-5 lg:grid-cols-3">
+          <div class="neo-card p-6 reveal">
+            <h2 class="font-display text-2xl">Misi</h2>
+            <p class="mt-2 text-white/70">
+              Membuat landing page yang cepat dipakai, mudah di-maintain, dan siap dijual sebagai template premium.
+            </p>
+          </div>
+          <div class="neo-card p-6 reveal">
+            <h2 class="font-display text-2xl">Yang kamu dapat</h2>
+            <ul class="mt-2 space-y-2 text-white/70">
+              <li>• 3 Home layouts (V1/V2/V3)</li>
+              <li>• 3 Themes (Cyber/Pink/Acid)</li>
+              <li>• Multi-page + navbar konsisten</li>
+              <li>• Komponen dinamis dari data</li>
+            </ul>
+          </div>
+          <div class="neo-card p-6 reveal">
+            <h2 class="font-display text-2xl">Teknis</h2>
+            <p class="mt-2 text-white/70">
+              Tailwind CDN + CSS Variables + Vanilla JS. No-build supaya buyer bisa langsung pakai.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-10 neo-card p-6 sm:p-10 reveal">
+          <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+            <div>
+              <h3 class="font-display text-3xl">Siap dipakai untuk klien</h3>
+              <p class="mt-2 text-white/70">
+                Tinggal ganti copy & data di <code class="px-1.5 py-0.5 rounded bg-white/10">assets/app.js</code>.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="pricing.html" class="neo-btn">Lihat Pricing</a>
+              <a href="index-v1.html#contact" class="neo-btn neo-btn--ghost">Kontak</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Injected footer -->
+        <div id="siteFooter"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>

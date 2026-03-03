@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id" data-theme="cyber" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms — NeonLaunch</title>
+  <meta name="description" content="Template halaman Terms untuk landing page neon multi-page." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: 'rgb(var(--night) / <alpha-value>)',
+            neon: {
+              cyan: 'rgb(var(--neon-cyan) / <alpha-value>)',
+              pink: 'rgb(var(--neon-pink) / <alpha-value>)',
+              lime: 'rgb(var(--neon-lime) / <alpha-value>)',
+              violet: 'rgb(var(--neon-violet) / <alpha-value>)',
+            }
+          },
+          fontFamily: { display: ["Space Grotesk","Inter","ui-sans-serif","system-ui"] }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="./assets/themes.css" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body data-page="terms" class="bg-night text-white antialiased">
+  <div class="neo-bg">
+    <div class="neo-bg__gradients"></div>
+    <div class="neo-bg__grid"></div>
+    <div class="neo-bg__noise"></div>
+  </div>
+
+  <div id="siteHeader"></div>
+
+  <main class="pt-32 sm:pt-36">
+    <section>
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal">
+          <h1 class="font-display text-4xl sm:text-5xl">Terms of Service</h1>
+          <p class="mt-3 text-white/70">Terakhir diperbarui: <span class="neo-text">[Tanggal]</span></p>
+        </div>
+
+        <div class="mt-10 neo-card p-6 sm:p-10 reveal">
+          <div class="prose prose-invert max-w-none">
+            <h2 class="font-display text-2xl">1. Penggunaan</h2>
+            <p class="text-white/70">
+              Ini placeholder Terms. Saat kamu jual, sesuaikan dengan model lisensi dan aturan penggunaan template/produk.
+            </p>
+
+            <h2 class="font-display text-2xl mt-8">2. Pembayaran & Refund</h2>
+            <p class="text-white/70">Jelaskan kebijakan pembayaran, refund, dan cakupan support.</p>
+
+            <h2 class="font-display text-2xl mt-8">3. Lisensi</h2>
+            <ul class="text-white/70 list-disc pl-5">
+              <li>Personal/Commercial use</li>
+              <li>Larangan redistribute (jika ada)</li>
+              <li>Scope penggunaan client/agency</li>
+            </ul>
+
+            <h2 class="font-display text-2xl mt-8">4. Batasan Tanggung Jawab</h2>
+            <p class="text-white/70">Tuliskan disclaimer dan limitation of liability sesuai kebutuhan.</p>
+          </div>
+
+          <div class="mt-8 flex gap-3">
+            <a class="neo-btn" href="privacy.html">Baca Privacy</a>
+            <a class="neo-btn neo-btn--ghost" href="index.html">Kembali</a>
+          </div>
+        </div>
+
+        <div id="siteFooter"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>

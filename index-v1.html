@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="id" data-theme="cyber" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeonLaunch — Home V1 (Split Hero)</title>
+  <meta name="description" content="Home V1: Split hero + section modular. Neon multi-page dengan 3 tema." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: 'rgb(var(--night) / <alpha-value>)',
+            neon: {
+              cyan: 'rgb(var(--neon-cyan) / <alpha-value>)',
+              pink: 'rgb(var(--neon-pink) / <alpha-value>)',
+              lime: 'rgb(var(--neon-lime) / <alpha-value>)',
+              violet: 'rgb(var(--neon-violet) / <alpha-value>)',
+            }
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui"],
+            display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui"],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="./assets/themes.css" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body data-page="home" class="bg-night text-white antialiased selection:bg-neon-cyan/30 selection:text-white">
+  <div class="neo-bg">
+    <div class="neo-bg__gradients"></div>
+    <div class="neo-bg__grid"></div>
+    <div class="neo-bg__noise"></div>
+  </div>
+
+  <div id="siteHeader"></div>
+
+  <main id="top" class="relative pt-32 sm:pt-36">
+    <!-- HERO -->
+    <section>
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <div class="reveal">
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80">
+              <span class="h-2 w-2 rounded-full bg-neon-cyan" style="box-shadow:0 0 18px rgb(var(--neon-cyan)/.25)"></span>
+              Multi-page • 3 tema • No-build
+            </div>
+
+            <h1 class="mt-5 font-display text-4xl/tight sm:text-5xl/tight lg:text-6xl/tight">
+              Template <span class="neo-text">neon</span> yang bikin produkmu terlihat premium.
+            </h1>
+
+            <p class="mt-4 max-w-xl text-white/75">
+              Struktur modular, mudah rebrand, dan siap dijual. Tinggal edit data di <code class="px-1.5 py-0.5 rounded bg-white/10">assets/app.js</code>.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <a href="pricing.html" class="neo-btn">Lihat Paket</a>
+              <a href="#features" class="neo-btn neo-btn--ghost">Lihat Fitur</a>
+            </div>
+
+            <div class="mt-7 grid grid-cols-3 gap-3 sm:max-w-md">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div class="font-display text-xl">3</div>
+                <div class="text-xs text-white/60 mt-1">Theme</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div class="font-display text-xl">5</div>
+                <div class="text-xs text-white/60 mt-1">Pages</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div class="font-display text-xl">JS</div>
+                <div class="text-xs text-white/60 mt-1">Ringan</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right visual -->
+          <div class="reveal lg:justify-self-end">
+            <div class="neo-card p-6 sm:p-7">
+              <div class="flex items-center justify-between">
+                <div class="text-sm text-white/70">Live Components</div>
+                <div class="text-xs text-white/60">Theme switcher ✅</div>
+              </div>
+
+              <div class="mt-5 grid gap-4">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div class="text-sm text-white/70">Hero CTA</div>
+                  <div class="mt-1 font-semibold">Glowing button + gradient text</div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div class="text-sm text-white/70">Pricing</div>
+                  <div class="mt-1 font-semibold">3 tier + recommended plan</div>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <div class="text-sm text-white/70">FAQ</div>
+                  <div class="mt-1 font-semibold">Accordion aksesibel</div>
+                </div>
+              </div>
+
+              <div class="mt-6 rounded-2xl border border-white/10 bg-white/5 p-4">
+                <div class="text-sm text-white/70">Quick start</div>
+                <pre class="mt-2 overflow-auto text-xs text-white/70"><code>1) Edit DATA di app.js
+2) Upload folder
+3) Done ✅</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-14 border-t border-white/10"></div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal">
+          <h2 class="font-display text-3xl sm:text-4xl">Fitur yang siap dipakai</h2>
+          <p class="mt-2 max-w-2xl text-white/70">
+            Grid fitur ini data-driven dari <code class="px-1.5 py-0.5 rounded bg-white/10">DATA.features</code>.
+          </p>
+        </div>
+        <div id="featuresGrid" class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- PRICING (summary) -->
+    <section id="pricing" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 class="font-display text-3xl sm:text-4xl">Harga yang jelas</h2>
+            <p class="mt-2 max-w-2xl text-white/70">Ringkasan paket. Detail ada di halaman pricing.</p>
+          </div>
+          <a href="pricing.html" class="neo-btn neo-btn--ghost w-fit">Buka Pricing Page</a>
+        </div>
+        <div id="pricingGrid" class="mt-10 grid gap-5 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal flex items-center justify-between gap-4">
+          <div>
+            <h2 class="font-display text-3xl sm:text-4xl">Kata mereka</h2>
+            <p class="mt-2 text-white/70">Slider ringan tanpa library.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <button id="testiPrev" class="neo-iconbtn" aria-label="Sebelumnya">‹</button>
+            <button id="testiNext" class="neo-iconbtn" aria-label="Berikutnya">›</button>
+          </div>
+        </div>
+
+        <div class="mt-10">
+          <div id="testiCard" class="neo-card p-6 sm:p-8 reveal"></div>
+          <div id="testiDots" class="mt-5 flex justify-center gap-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="reveal">
+          <h2 class="font-display text-3xl sm:text-4xl">FAQ</h2>
+          <p class="mt-2 max-w-2xl text-white/70">Accordion aksesibel, diedit dari data.</p>
+        </div>
+        <div id="faqList" class="mt-10 grid gap-4"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="pb-10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="neo-card p-6 sm:p-10 reveal">
+          <div class="grid gap-8 lg:grid-cols-2 lg:items-center">
+            <div>
+              <h3 class="font-display text-2xl sm:text-3xl">Mau custom untuk jualanmu?</h3>
+              <p class="mt-2 text-white/70">Form demo — sambungkan ke backend/API.</p>
+              <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">✅ Multi-page</div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">✅ 3 Themes</div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">✅ Modular</div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-4">✅ No-build</div>
+              </div>
+            </div>
+
+            <form id="leadForm" class="rounded-2xl border border-white/10 bg-white/5 p-5 sm:p-6">
+              <div class="grid gap-4">
+                <div>
+                  <label class="text-sm text-white/70" for="name">Nama</label>
+                  <input id="name" name="name" class="neo-input" placeholder="Nama kamu" autocomplete="name" required />
+                </div>
+                <div>
+                  <label class="text-sm text-white/70" for="email">Email</label>
+                  <input id="email" name="email" type="email" class="neo-input" placeholder="email@domain.com" autocomplete="email" required />
+                </div>
+                <div>
+                  <label class="text-sm text-white/70" for="message">Pesan</label>
+                  <textarea id="message" name="message" rows="4" class="neo-input" placeholder="Ceritakan kebutuhanmu..."></textarea>
+                </div>
+
+                <button type="submit" class="neo-btn w-full">Kirim</button>
+                <p id="formHint" class="text-xs text-white/50">Demo: form tidak mengirim ke server.</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="siteFooter"></div>
+  </main>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>

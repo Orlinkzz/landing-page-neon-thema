@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeonLaunch</title>
+</head>
+<body>
+  <script>
+    const key = "neo_home_file";
+    const saved = localStorage.getItem(key);
+    const ok = saved && /^index(?:-v[1-3])?\.html$/i.test(saved);
+    const target = ok ? saved : "index-v1.html";
+    location.replace(target);
+  </script>
+
+  <noscript>
+    <p>JavaScript dibutuhkan. Pilih halaman:</p>
+    <ul>
+      <li><a href="index-v1.html">Home V1</a></li>
+      <li><a href="index-v2.html">Home V2</a></li>
+      <li><a href="index-v3.html">Home V3</a></li>
+    </ul>
+  </noscript>
+</body>
+</html>

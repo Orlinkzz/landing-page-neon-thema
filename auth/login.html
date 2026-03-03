@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="id" data-theme="cyber" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — NeonLaunch</title>
+  <meta name="description" content="Login page neon (demo-ready & API-ready)." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: 'rgb(var(--night) / <alpha-value>)',
+            neon: {
+              cyan: 'rgb(var(--neon-cyan) / <alpha-value>)',
+              pink: 'rgb(var(--neon-pink) / <alpha-value>)',
+              lime: 'rgb(var(--neon-lime) / <alpha-value>)',
+              violet: 'rgb(var(--neon-violet) / <alpha-value>)',
+            }
+          },
+          fontFamily: {
+            display: ["Space Grotesk","Inter","ui-sans-serif","system-ui"],
+            sans: ["Inter","ui-sans-serif","system-ui"],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/themes.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+
+<body class="bg-night text-white antialiased">
+  <div class="neo-bg">
+    <div class="neo-bg__gradients"></div>
+    <div class="neo-bg__grid"></div>
+    <div class="neo-bg__noise"></div>
+  </div>
+
+  <!-- Top mini bar -->
+  <header class="fixed inset-x-0 top-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="neo-nav mt-3 flex items-center justify-between rounded-2xl px-4 py-3">
+        <a href="../index.html" class="flex items-center gap-2">
+          <span class="neo-logo">◆</span>
+          <span class="font-display text-lg tracking-wide">NeonLaunch</span>
+        </a>
+
+        <div class="flex items-center gap-3">
+          <div class="relative">
+            <button id="themeBtn" class="neo-btn neo-btn--ghost" type="button" aria-expanded="false">
+              Theme: <span id="themeLabel">Cyber</span>
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none">
+                <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div id="themeMenu" class="hidden absolute right-0 mt-2 w-48 rounded-2xl border border-white/10 bg-black/50 backdrop-blur p-2">
+              <button class="w-full text-left px-3 py-2 rounded-xl hover:bg-white/10 transition" data-theme="cyber">Cyber Blue</button>
+              <button class="w-full text-left px-3 py-2 rounded-xl hover:bg-white/10 transition" data-theme="pink">Neon Pink</button>
+              <button class="w-full text-left px-3 py-2 rounded-xl hover:bg-white/10 transition" data-theme="acid">Acid Lime</button>
+            </div>
+          </div>
+          <a class="neo-btn" href="../index.html">Kembali</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Toast host -->
+  <div id="toastHost" class="fixed right-4 top-24 z-50 w-[min(420px,calc(100vw-2rem))] space-y-3"></div>
+
+  <main class="pt-28 sm:pt-32 pb-12">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-8 lg:grid-cols-2 lg:items-stretch">
+        <!-- Left info -->
+        <section class="neo-card p-6 sm:p-10 reveal hidden lg:block">
+          <h1 class="font-display text-4xl">Masuk ke <span class="neo-text">Dashboard</span></h1>
+          <p class="mt-3 text-white/70">
+            Ini auth flow lengkap untuk kamu kembangkan jadi sistem dashboard. Sekarang mode demo (localStorage),
+            nanti tinggal switch ke API.
+          </p>
+
+          <div class="mt-8 grid gap-3">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">✅ Theme persisten</div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">✅ Verify email (demo code)</div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-4">✅ Forgot/Reset password (token)</div>
+          </div>
+
+          <p class="mt-6 text-xs text-white/45">
+            Catatan: Demo menyimpan password plaintext. Untuk produksi wajib pakai backend + hashing (bcrypt/argon2).
+          </p>
+        </section>
+
+        <!-- Right form -->
+        <section class="neo-card p-6 sm:p-10 reveal">
+          <h2 class="font-display text-3xl">Login</h2>
+          <p class="mt-2 text-white/70">Belum punya akun? <a class="neo-link" href="./register.html">Register</a></p>
+
+          <form id="loginForm" class="mt-8 grid gap-4">
+            <div>
+              <label class="text-sm text-white/70" for="email">Email</label>
+              <input id="email" name="email" type="email" class="neo-input" placeholder="email@domain.com" autocomplete="email" required />
+            </div>
+
+            <div>
+              <label class="text-sm text-white/70" for="password">Password</label>
+              <div class="relative">
+                <input id="password" name="password" type="password" class="neo-input pr-24" placeholder="••••••••" autocomplete="current-password" required />
+                <button type="button" data-toggle-password="password" class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-white/60 hover:text-white transition">
+                  Lihat
+                </button>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <label class="flex items-center gap-2 text-sm text-white/70">
+                <input id="remember" type="checkbox" class="accent-white" />
+                Remember me
+              </label>
+              <a class="neo-link text-sm" href="./forgot.html">Lupa password?</a>
+            </div>
+
+            <button type="submit" class="neo-btn w-full">Masuk</button>
+
+            <div class="mt-3 grid grid-cols-2 gap-3">
+              <button type="button" id="btnGoogle" class="neo-btn neo-btn--ghost w-full">Google</button>
+              <button type="button" id="btnGithub" class="neo-btn neo-btn--ghost w-full">GitHub</button>
+            </div>
+
+            <p class="text-xs text-white/45 mt-2">
+              Social login hanya placeholder UI. Sambungkan ke OAuth provider saat produksi.
+            </p>
+          </form>
+
+          <div class="mt-8 border-t border-white/10 pt-6 text-sm text-white/60">
+            © <span id="year"></span> NeonLaunch
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="./auth.js"></script>
+  <script>
+    Auth.initCommon();
+
+    // Placeholder social buttons
+    document.getElementById("btnGoogle").addEventListener("click", () => Auth.toast("OAuth Google belum diaktifkan (placeholder).", "info"));
+    document.getElementById("btnGithub").addEventListener("click", () => Auth.toast("OAuth GitHub belum diaktifkan (placeholder).", "info"));
+
+    const form = document.getElementById("loginForm");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      Auth.setLoading(form, true);
+      try {
+        const email = form.email.value.trim();
+        const password = form.password.value;
+
+        const res = await Auth.login({ email, password });
+        Auth.toast("Login berhasil. Mengalihkan ke dashboard…", "success");
+        setTimeout(() => (window.location.href = "../dashboard.html"), 450);
+      } catch (err) {
+        const msg = err?.message || "Gagal login.";
+        Auth.toast(msg, "error");
+
+        if (msg.toLowerCase().includes("verifikasi")) {
+          // bantu user ke verify
+          setTimeout(() => (window.location.href = `./verify.html?email=${encodeURIComponent(form.email.value.trim())}`), 900);
+        }
+      } finally {
+        Auth.setLoading(form, false);
+      }
+    });
+  </script>
+</body>
+</html>
